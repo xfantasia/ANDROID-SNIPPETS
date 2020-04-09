@@ -23,8 +23,21 @@
     }
     
     
-    
-    
+ ////////// CURRENCY CONVERTER APP //////////    
+        public void convertCurrency(View view)
+    {
+        EditText editTextValue = (EditText) findViewById(R.id.editTextCurrency);
+
+
+        String nairaValueString = editTextValue.getText().toString();
+
+        double nairaValue = Double.parseDouble(nairaValueString);
+        double dollarValue = nairaValue / 360;
+
+        String convertedValue = String.format("%.2f", dollarValue);
+
+        Toast.makeText(this, "$"+convertedValue+" dollars", Toast.LENGTH_SHORT).show();
+    }
     
     
     
