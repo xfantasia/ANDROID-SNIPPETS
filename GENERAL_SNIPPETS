@@ -1,0 +1,35 @@
+ 
+ ////////// SIMPLE FUNCTIONS //////////
+    public void clickFunction(View view){
+        EditText nameEditText = (EditText) findViewById(R.id.nameEditText);
+        Log.i("info", "Button was clicked!");
+        Log.i("Another info", nameEditText.getText().toString());
+
+        ImageView imagex = (ImageView) findViewById(R.id.imageView2);
+        imagex.setImageResource(R.drawable.superadmin);
+
+        String messagex = "Your name is "+nameEditText.getText().toString();
+       //Toast.makeText(this, "Hi Lulu!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, messagex, Toast.LENGTH_SHORT).show();
+    }
+
+
+
+ ////////// EXIT ANDROID APP //////////
+ public void exitApp(View view){
+        moveTaskToBack(true);
+        android.os.Process.killProcess(android.os.Process.myPid());
+        System.exit(1);
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
